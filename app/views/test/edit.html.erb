@@ -1,0 +1,10 @@
+<h1>Edit</h1>
+
+<%=form_for @test,:controller=>'test',:action=>'update' do |f|%>
+<P>Name <%= f.text_field :name%></p>
+<p>Age<%= f.text_field :age%></p>
+
+<%=f.submit "SUBMIT"%>
+<%end%>
+
+<%= link_to 'BACK', {:action=>"index",:controller=>"test"}%>

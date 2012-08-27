@@ -1,0 +1,10 @@
+<h1>Show</h1>
+
+
+Name:<%=@test.name%>
+<br><br>
+Age:<%=@test.age%>
+<br>
+<br>
+<%= link_to 'BACK', {:action=>"index",:controller=>"test"}%><br>
+<%= link_to 'UPDATE', {:action=>"edit", :controller=> "test"}%>

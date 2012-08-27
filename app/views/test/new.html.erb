@@ -1,0 +1,10 @@
+<h1>New</h1>
+
+<%=form_for @test ,:url=>{:action=>'create'} do |f|%>
+<P>Name <%= f.text_field :name%></p>
+<p>Age<%= f.text_field :age%></p>
+
+<%= f.submit "SAVE" %>
+<%end%>
+
+<%= link_to 'BACK', {:action=>"index",:controller=>"test"}%>

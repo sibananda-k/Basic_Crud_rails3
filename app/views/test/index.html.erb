@@ -1,0 +1,25 @@
+<h1>Index page</h1>
+
+
+<table border=1>
+<tr>
+<th>Name:</th>
+<th>Age:</th>
+<th></th>
+<th></th>
+<th></th>
+
+</tr>
+
+<% @test.each do |i|%>
+<tr>
+  <td><%= i.name%></td>
+  <td><%=i.age%></td>
+  <td><%= link_to 'SHOW',i%></td>
+  <td><%= link_to 'EDIT', :controller=>'test',:action=>'edit',:id=>i.id%></td>
+  <td><%= link_to  'DESTROY',i,:confirm=>'Are you sure?',:method=>:delete%></td>
+ </tr>
+ <%end%>
+ </table>
+ <hr /> 
+ <%= link_to 'NEW', {:action=>"new", :controller=> "test"}%>
